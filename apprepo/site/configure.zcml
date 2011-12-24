@@ -1,4 +1,5 @@
 <configure xmlns="http://namespaces.zope.org/zope"
+        xmlns:contentratings="http://namespaces.plone.org/contentratings"
         xmlns:grok="http://namespaces.zope.org/grok">
 
   <include package="Products.CMFCore" file="permissions.zcml" />
@@ -6,5 +7,13 @@
   <includeDependencies package="." />
 
   <grok:grok package="." />
+
+  <contentratings:category
+      for="collective.packagekit.pkappbehavior.IPackageKitApplicationBehavior"
+      title="Rating"
+      view_name="ratings_view"
+      read_expr="python:checkPermission('Content Ratings: View User Rating', context)"
+      write_expr="python:checkPermission('Content Ratings: User Rate', context)"
+      />
 
 </configure>
