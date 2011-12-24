@@ -25,7 +25,8 @@ class OIDProfileRedirect(grok.Viewlet):
 
         member = membership.getAuthenticatedMember()
 
-        if member.fullname and member.email:
+        if (member.getProperty('fullname') and 
+                member.getProperty('email')):
             return ''
 
         memberid = str(member.getId())
