@@ -20,6 +20,8 @@ class OIDProfileRedirect(grok.Viewlet):
         path = self.request.physicalPathFromURL(self.request.getURL())
         if path[-1] == '@@personal-information':
             return ''
+        if path[-1] == 'logout':
+            return ''
         if not self.request.get('openid_provider'):
             return ''
 
