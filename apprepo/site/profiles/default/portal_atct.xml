@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<atcttool xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+    <topic_indexes>
+        <index name="average_rating" friendlyName="Average Rating"
+            description="Average rating of the item"
+            enabled="True">
+            <criteria>ATSortCriterion</criteria>
+        </index>
+    </topic_indexes>
+</atcttool>

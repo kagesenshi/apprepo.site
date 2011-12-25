@@ -1,0 +1,9 @@
+<metadata>
+  <version>1.0</version>
+    <dependencies>
+        <dependency>profile-collective.packagekit:default</dependency>
+        <dependency>profile-plone.app.theming:default</dependency>
+        <dependency>profile-plone.app.openid:default</dependency>
+        <dependency>profile-plone.contentratings:default</dependency>
+    </dependencies>
+</metadata>

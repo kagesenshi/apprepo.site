@@ -1,5 +1,6 @@
 <configure xmlns="http://namespaces.zope.org/zope"
         xmlns:contentratings="http://namespaces.plone.org/contentratings"
+        xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
         xmlns:grok="http://namespaces.zope.org/grok">
 
   <include package="Products.CMFCore" file="permissions.zcml" />
@@ -15,5 +16,17 @@
       read_expr="python:checkPermission('Content Ratings: View User Rating', context)"
       write_expr="python:checkPermission('Content Ratings: User Rate', context)"
       />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="AppRepo Site Customizations"
+      directory="profiles/default"
+      description="Extension profile for AppRepo Site Customizations"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <adapter 
+        factory=".indexer.average_rating_value"
+        name="average_rating_value"/>
 
 </configure>
