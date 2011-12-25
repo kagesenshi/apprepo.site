@@ -25,8 +25,4 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-  <adapter 
-        factory=".indexer.average_rating_value"
-        name="average_rating_value"/>
-
 </configure>
