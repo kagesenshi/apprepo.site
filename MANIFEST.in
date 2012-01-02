@@ -1,0 +1,5 @@
+recursive-include apprepo *
+global-exclude *pyc
+include bootstrap.py
+include buildout.cfg
+include versions.cfg
